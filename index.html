@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="Calcora is a fast, private, accessible online calculator with history, memory, percentages, keyboard support, dark mode, and precise arithmetic.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bankarshashank47-cloud.github.io/calcora/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Calcora — Free Online Calculator">
+  <meta property="og:description" content="A fast, private and accessible online calculator.">
+  <meta property="og:url" content="https://bankarshashank47-cloud.github.io/calcora/">
+  <meta property="og:site_name" content="Calcora">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Calcora — Free Online Calculator">
+  <meta name="twitter:description" content="Fast, private online calculations with history and keyboard support.">
+  <title>Calcora — Free Online Calculator</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Calcora","url":"https://bankarshashank47-cloud.github.io/calcora/","applicationCategory":"Calculator","operatingSystem":"Any","description":"Free online calculator with history, memory, keyboard support and accessible responsive design."}</script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Calcora home"><span class="brand-mark" aria-hidden="true">=</span><span>Calcora</span></a>
+    <button id="themeToggle" class="icon-button" type="button" aria-label="Switch theme" title="Switch theme">☾</button>
+  </header>
+
+  <main class="page-shell">
+    <section class="hero" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">FAST · PRIVATE · FREE</p>
+        <h1 id="page-title">Online Calculator</h1>
+        <p class="hero-copy">A clean, powerful calculator for everyday math. No account, no tracking, no unnecessary clutter.</p>
+      </div>
+    </section>
+
+    <section class="app-grid" aria-label="Calculator application">
+      <article class="calculator-card">
+        <div class="display-wrap">
+          <div id="expressionPreview" class="expression-preview" aria-label="Expression preview"></div>
+          <div id="display" class="display" role="status" aria-live="polite" aria-atomic="true">0</div>
+          <div id="resultPreview" class="result-preview" aria-live="polite"></div>
+        </div>
+        <div class="memory-row" aria-label="Memory controls">
+          <button class="memory-key" data-action="memory-add" type="button">M+</button>
+          <button class="memory-key" data-action="memory-subtract" type="button">M−</button>
+          <button class="memory-key" data-action="memory-recall" type="button">MR</button>
+          <button class="memory-key" data-action="memory-clear" type="button">MC</button>
+        </div>
+        <div class="keypad" aria-label="Calculator keypad">
+          <button class="key utility" data-action="clear-all" type="button">AC</button>
+          <button class="key utility" data-action="clear" type="button">C</button>
+          <button class="key utility" data-action="backspace" type="button" aria-label="Backspace">⌫</button>
+          <button class="key operator" data-value="/" type="button" aria-label="Divide">÷</button>
+          <button class="key" data-value="7" type="button">7</button>
+          <button class="key" data-value="8" type="button">8</button>
+          <button class="key" data-value="9" type="button">9</button>
+          <button class="key operator" data-value="*" type="button" aria-label="Multiply">×</button>
+          <button class="key" data-value="4" type="button">4</button>
+          <button class="key" data-value="5" type="button">5</button>
+          <button class="key" data-value="6" type="button">6</button>
+          <button class="key operator" data-value="-" type="button" aria-label="Subtract">−</button>
+          <button class="key" data-value="1" type="button">1</button>
+          <button class="key" data-value="2" type="button">2</button>
+          <button class="key" data-value="3" type="button">3</button>
+          <button class="key operator" data-value="+" type="button" aria-label="Add">+</button>
+          <button class="key utility" data-action="toggle-sign" type="button">±</button>
+          <button class="key" data-value="0" type="button">0</button>
+          <button class="key" data-value="." type="button" aria-label="Decimal point">.</button>
+          <button class="key equals" data-action="equals" type="button">=</button>
+          <button class="key utility" data-value="(" type="button">(</button>
+          <button class="key utility" data-value=")" type="button">)</button>
+          <button class="key utility" data-action="percentage" type="button">%</button>
+          <button class="key utility" data-action="undo" type="button" aria-label="Undo">↶</button>
+          <button class="key utility" data-action="redo" type="button" aria-label="Redo">↷</button>
+          <button class="key utility" data-action="copy-result" type="button" aria-label="Copy result">Copy</button>
+          <button class="key utility" data-action="share" type="button" aria-label="Share calculation">Share</button>
+        </div>
+        <p id="error" class="error" role="alert" hidden></p>
+        <p class="keyboard-hint">Keyboard: numbers/operators · Enter = equals · Esc = clear · Backspace = delete</p>
+      </article>
+
+      <aside class="history-card" aria-labelledby="history-title">
+        <div class="section-heading"><h2 id="history-title">History</h2><button id="clearHistory" class="text-button" type="button">Clear all</button></div>
+        <div id="historyList" class="history-list"><p class="empty-state">Your calculations will appear here.</p></div>
+      </aside>
+    </section>
+
+    <section class="info-grid" aria-label="Calculator information">
+      <article><h2>Simple and precise</h2><p>Calcora respects operator precedence, handles decimals and long numbers, and gives clear errors instead of crashing.</p></article>
+      <article><h2>Built for every screen</h2><p>Touch-friendly controls, keyboard navigation, responsive layouts, visible focus states and reduced-motion support.</p></article>
+      <article><h2>Private by default</h2><p>Your calculation history stays in your browser when storage is available. Calcora uses no analytics or third-party tracking.</p></article>
+    </section>
+  </main>
+
+  <footer class="site-footer"><p>© <span id="year"></span> Calcora. Free to use.</p><a href="404.html">Page not found</a></footer>
+  <script src="app.js" defer></script>
+</body>
+</html>
